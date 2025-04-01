@@ -1,0 +1,8 @@
+#this file is created to automate the workflow 
+#!/bin/bash
+yum install httpd git -y
+service httpd start
+chkconfig httpd on
+cd /var/www/html
+git clone https://github.com/hasura/kriti-lang.git .
+service httpd restart
